@@ -6,8 +6,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="../public/css/output.css">
     <script src="../public/index.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://api.fontshare.com/v2/css?f[]=pally@400&display=swap" rel="stylesheet">
 </head>
-<body class="bg-sky-100">
+<body class="font-pally">
     <div class="bg-cool-teal text-sky-300 shadow-lg">
         <nav class="fixed top-0 left-0 w-full flex justify-between items-center py-4 px-6 bg-white shadow-md z-50">
             <a href="index.html" class="text-2xl font-bold">MyWebsite</a>
@@ -26,13 +28,129 @@
         </nav>
     </div>
 
-    <div class="mt-32 container mx-auto">
-        <div class="mx-auto text-center">
-            <h3 class="text-3xl font-bold text-slate-700">Agung <span class="text-sky-400">Surya</span></h3>
-            <img src="../lib/img/kuzan.png" alt="Poto Profil" width="500px" height="500px" class="mt-4 rounded-full sm:mt-6 sm:h-64 mx-auto">
+    <div class="mt-32 container mx-auto pb-40 pt-20">
+        <div class="flex flex-col-reverse my-5 md:flex-row items-center justify-between px-5">
+            <div class="text-center md:text-left">
+                <h1 class="text-5xl font-bold mt-3 text-slate-700 bg-gradient-to-r from-platinum to-blue-telegram bg-clip-text text-transparent md:text-left" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom">Agung Surya</h1>
+                <h4 class="text-3xl font-semibold text-slate-700 mt-5" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom">Full Stack Developer</h4>
+            </div>
+            <img src="../lib/img/kuzan.png" alt="Poto Profil" class="my-6 h-64 rounded-full md:ml-auto md:rounded-none md:rounded-l-full" id="profile-img" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom">
         </div>
     </div>
 
-    <p class="mt-96">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, blanditiis.</p>
+    <section id="about" class="pt-5 bg-white-telegram mt-7 h-96 md:h-96">
+        <div class="container mx-auto p-3 mb-2">
+            <h1 class="mt-4 text-3xl font-bold text-center" data-aos="fade-right" 
+            data-aos-duration="800"
+            data-aos-delay="200" 
+            data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom">
+            About Me</h1>
+            <p class="text-center mt-3 text-lg mb-12"
+            data-aos="fade-right" 
+            data-aos-duration="800"
+            data-aos-delay="200" 
+            data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom">I am a fresh graduate in Software Engineering in SMK TI Bali Global Denpasar, i am currently making stuff for fun and learning. I am mastering several skills that used in web development.</p>
+            <h3 class="text-2xl font-semibold text-center mb-3"
+            data-aos="fade-right" 
+            data-aos-duration="800"
+            data-aos-delay="200" 
+            data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom">Tech Stacks</h3>
+            <div class="text-center gap-4 flex justify-center mb-5 p-3">
+                <img src="https://skillicons.dev/icons?i=git"
+                data-aos="zoom-in" 
+                loading="lazy"
+                data-aos-duration="800"
+                data-aos-delay="200" 
+                data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom"
+                />
+                <img src="https://skillicons.dev/icons?i=bootstrap"
+                data-aos="zoom-in" 
+                loading="lazy"
+                data-aos-duration="800"
+                data-aos-delay="200" 
+                data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom"
+                />
+                <img src="https://skillicons.dev/icons?i=html"
+                data-aos="zoom-in" 
+                loading="lazy"
+                data-aos-duration="800"
+                data-aos-delay="200" 
+                data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom"
+                />
+                <img src="https://skillicons.dev/icons?i=css"
+                data-aos="zoom-in" 
+                loading="lazy"
+                data-aos-duration="800"
+                data-aos-delay="200" 
+                data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom"
+                />
+                <img src="https://skillicons.dev/icons?i=mysql"
+                data-aos="zoom-in" 
+                loading="lazy"
+                data-aos-duration="800"
+                data-aos-delay="200" 
+                data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom"
+                />
+                <img src="https://skillicons.dev/icons?i=php"
+                data-aos="zoom-in" 
+                loading="lazy"
+                data-aos-duration="800"
+                data-aos-delay="200" 
+                data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom"
+                />
+                <img src="https://skillicons.dev/icons?i=tailwindcss"
+                data-aos="zoom-in" 
+                loading="lazy"
+                data-aos-duration="800"
+                data-aos-delay="200" 
+                data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom"
+                />
+                <img src="https://skillicons.dev/icons?i=github"
+                data-aos="zoom-in" 
+                loading="lazy"
+                data-aos-duration="800"
+                data-aos-delay="200" 
+                data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom"
+                />
+                <img src="https://skillicons.dev/icons?i=vscode"
+                data-aos="zoom-in" 
+                loading="lazy"
+                data-aos-duration="800"
+                data-aos-delay="200" 
+                data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom"
+                />
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-40 container mx-auto p-3">
+        <h1>My Experiences</h1>
+        <div>
+            <h2>Web Developer</h2>
+            <p>PT. Karya Anak Bangsa</p>
+            <p>2021 - 2022</p>
+        </div>
+    </section>~
+
+    <p class="mt-96 -translate-x-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, blanditiis.</p>
+    <p class="mt-96 -translate-x-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, blanditiis.</p>
+
+    <img src="https://skillicons.dev/icons?i=git"/>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        easing: "ease-out",
+        once: false,
+        mirror: true,
+      });
+
+      //reset animasi aos
+      document.addEventListener('scroll', () => {
+        AOS.refresh();
+      });
+      
+    </script>
 </body>
 </html>

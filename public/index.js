@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     const menuButton = document.getElementById('menu-button');
     const menu = document.getElementById('menu');
+    const image = document.getElementById('profile-img');
+
+    setTimeout(() => {
+        image.classList.remove("opacity-0", "translate-x-full");
+        image.classList.add("translate-x-0");
+    }, 200);
 
     menuButton.addEventListener('click', () => {
     menu.classList.toggle("hidden");
