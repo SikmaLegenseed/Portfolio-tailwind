@@ -1,299 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/output.css">
-    <script src="index.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link href="https://api.fontshare.com/v2/css?f[]=pally@400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Portfolio</title>
+  <!-- Tailwind CSS CDN (atau gunakan file build Anda) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- FontShare -->
+  <link href="https://api.fontshare.com/v2/css?f[]=pally@400&display=swap" rel="stylesheet" />
 </head>
-<body class="font-pally">
-    <div class="bg-cool-teal text-sky-300 shadow-lg">
-        <nav class="fixed top-0 left-0 w-full flex justify-between items-center py-4 px-6 bg-white shadow-md z-50">
-            <a href="index.html" class="text-2xl font-bold">MyWebsite</a>
-        
-            <!-- Mobile menu button -->
-            <button id="menu-button" class="block md:hidden text-2xl">&#9776;</button>
-        
-            <!-- Navigation links (Hidden by default on small screens) -->
-            <ul id="menu" class="hidden  py-2 flex-col absolute top-full text-center bg-white left-0 w-full md:relative md:flex md:top-0 md:w-auto md:flex-row md:space-x-6 ">
-                <li class="w-full"><a href="index.html" class="block py-3 px-6 w-full hover:text-sky-400 hover:translate-x-3 md:hover:translate-x-0 transition md:w-auto md:px-0">Home</a></li>
-                <li class="w-full"><a href="about.html" class="block py-3 pr-6 px-6 w-full hover:text-sky-400 hover:translate-x-3 md:hover:translate-x-0 transition md:w-auto md:px-0">About</a></li>
-                <li class="w-full"><a href="contact.html" class="block py-3 px-6 w-full hover:text-sky-400 hover:translate-x-3 md:hover:translate-x-0 transition md:w-auto md:px-0">Contact</a></li>
-                <li class="w-full"><a href="login.html" class="block py-3 px-6 w-full hover:text-sky-400 hover:translate-x-3 md:hover:translate-x-0 transition md:w-auto md:px-0">Login</a></li>
-            </ul>
-            
-        </nav>
+<body class="font-pally bg-gray-100">
+  <!-- Navigation -->
+  <div class="bg-cool-teal text-sky-300 shadow-lg">
+    <nav class="fixed top-0 left-0 w-full flex justify-between items-center py-4 px-4 bg-white shadow-md z-50">
+      <a href="index.html" class="text-2xl font-bold">MyWebsite</a>
+      <!-- Mobile menu button -->
+      <button id="menu-button" class="block md:hidden text-2xl focus:outline-none">&#9776;</button>
+      <!-- Navigation links -->
+      <ul id="menu" class="hidden flex-col space-y-2 py-2 absolute top-full left-0 w-full bg-white text-center md:relative md:flex md:flex-row md:space-x-6 md:space-y-0 md:w-auto">
+        <li class="w-full"><a href="index.html" class="block py-3 px-4 hover:text-sky-400 transition">Home</a></li>
+        <li class="w-full"><a href="about.html" class="block py-3 px-4 hover:text-sky-400 transition">About</a></li>
+        <li class="w-full"><a href="contact.html" class="block py-3 px-4 hover:text-sky-400 transition">Contact</a></li>
+        <li class="w-full"><a href="login.html" class="block py-3 px-4 hover:text-sky-400 transition">Login</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Header / Hero -->
+  <div class="mt-20 px-4 md:px-10 pb-40 pt-20 md:pt-40">
+    <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-4">
+      <div class="text-center md:text-left" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom">
+        <h1 class="text-5xl font-bold text-slate-700 bg-gradient-to-r from-sky-400 to-sky-600 bg-clip-text text-transparent">
+          Agung Surya
+        </h1>
+        <h4 class="text-3xl font-semibold text-slate-700 mt-5">
+          Full Stack Developer
+        </h4>
+      </div>
+      <img src="img/kuzan.png" alt="Poto Profil" class="my-6 h-64 rounded-full md:ml-auto md:rounded-none md:rounded-l-full" id="profile-img" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom" />
     </div>
+  </div>
 
-    <div class="mt-12 container mx-auto pb-40 pt-20 md:pt-40">
-        <div class="flex flex-col-reverse my-5 md:flex-row md:px-8 items-center justify-between px-5">
-            <div class="text-center md:text-left">
-                <h1 class="text-5xl font-bold mt-3 text-slate-700 bg-gradient-to-r from-platinum to-blue-telegram bg-clip-text text-transparent md:text-left" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom">Agung Surya</h1>
-                <h4 class="text-3xl font-semibold text-slate-700 mt-5" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom">Full Stack Developer</h4>
-            </div>
-            <img src="img/kuzan.png" alt="Poto Profil" class="my-6 h-64 rounded-full md:ml-auto md:rounded-none md:rounded-l-full" id="profile-img" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom">
-        </div>
+  <!-- About Section -->
+  <section id="about" class="pt-5 bg-white-telegram mt-7 h-auto md:h-96 rounded-lg px-4">
+    <div class="mx-auto p-3 mb-2 max-w-full">
+      <h1 class="mt-4 text-3xl font-bold text-center" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200" data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom">
+        About Me
+      </h1>
+      <p class="text-center mt-3 text-lg mb-12" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200" data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom">
+        I am a fresh graduate in Software Engineering in SMK TI Bali Global Denpasar, currently making projects for fun and learning. I am mastering several skills used in web development.
+      </p>
+      <h3 class="text-2xl font-semibold text-center mb-3" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200" data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom">
+        Tech Stacks
+      </h3>
+      <div class="flex flex-wrap justify-center gap-4 mb-5 p-3" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200" data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom">
+        <img src="https://skillicons.dev/icons?i=git" alt="Git" class="w-7" loading="lazy" />
+        <img src="https://skillicons.dev/icons?i=bootstrap" alt="Bootstrap" class="w-7" loading="lazy" />
+        <img src="https://skillicons.dev/icons?i=html" alt="HTML" class="w-7" loading="lazy" />
+        <img src="https://skillicons.dev/icons?i=css" alt="CSS" class="w-7" loading="lazy" />
+        <img src="https://skillicons.dev/icons?i=mysql" alt="MySQL" class="w-7" loading="lazy" />
+        <img src="https://skillicons.dev/icons?i=php" alt="PHP" class="w-7" loading="lazy" />
+        <img src="https://skillicons.dev/icons?i=tailwindcss" alt="Tailwind" class="w-7" loading="lazy" />
+        <img src="https://skillicons.dev/icons?i=github" alt="GitHub" class="w-7" loading="lazy" />
+        <img src="https://skillicons.dev/icons?i=vscode" alt="VS Code" class="w-7" loading="lazy" />
+      </div>
     </div>
+  </section>
 
-    <section id="about" class="pt-5 bg-white-telegram mt-7 h-96 md:h-96 rounded-lg">
-        <div class="container mx-auto p-3 mb-2">
-            <h1 class="mt-4 text-3xl font-bold text-center" data-aos="fade-right" 
-            data-aos-duration="800"
-            data-aos-delay="200" 
-            data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom">
-            About Me</h1>
-            <p class="text-center mt-3 text-lg mb-12"
-            data-aos="fade-right" 
-            data-aos-duration="800"
-            data-aos-delay="200" 
-            data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom">I am a fresh graduate in Software Engineering in SMK TI Bali Global Denpasar, i am currently making stuff for fun and learning. I am mastering several skills that used in web development.</p>
-            <h3 class="text-2xl font-semibold text-center mb-3"
-            data-aos="fade-right" 
-            data-aos-duration="800"
-            data-aos-delay="200" 
-            data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom">Tech Stacks</h3>
-            <div class="text-center gap-4 flex justify-center mb-5 p-3">
-                <img src="https://skillicons.dev/icons?i=git"
-                data-aos="zoom-in" 
-                loading="lazy"
-                data-aos-duration="800"
-                data-aos-delay="200" 
-                data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom"
-                />
-                <img src="https://skillicons.dev/icons?i=bootstrap"
-                data-aos="zoom-in" 
-                loading="lazy"
-                data-aos-duration="800"
-                data-aos-delay="200" 
-                data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom"
-                />
-                <img src="https://skillicons.dev/icons?i=html"
-                data-aos="zoom-in" 
-                loading="lazy"
-                data-aos-duration="800"
-                data-aos-delay="200" 
-                data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom"
-                />
-                <img src="https://skillicons.dev/icons?i=css"
-                data-aos="zoom-in" 
-                loading="lazy"
-                data-aos-duration="800"
-                data-aos-delay="200" 
-                data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom"
-                />
-                <img src="https://skillicons.dev/icons?i=mysql"
-                data-aos="zoom-in" 
-                loading="lazy"
-                data-aos-duration="800"
-                data-aos-delay="200" 
-                data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom"
-                />
-                <img src="https://skillicons.dev/icons?i=php"
-                data-aos="zoom-in" 
-                loading="lazy"
-                data-aos-duration="800"
-                data-aos-delay="200" 
-                data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom"
-                />
-                <img src="https://skillicons.dev/icons?i=tailwindcss"
-                data-aos="zoom-in" 
-                loading="lazy"
-                data-aos-duration="800"
-                data-aos-delay="200" 
-                data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom"
-                />
-                <img src="https://skillicons.dev/icons?i=github"
-                data-aos="zoom-in" 
-                loading="lazy"
-                data-aos-duration="800"
-                data-aos-delay="200" 
-                data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom"
-                />
-                <img src="https://skillicons.dev/icons?i=vscode"
-                data-aos="zoom-in" 
-                loading="lazy"
-                data-aos-duration="800"
-                data-aos-delay="200" 
-                data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom"
-                />
-            </div>
+  <!-- Experiences Section -->
+  <section class="mt-40 px-4 md:px-10 pb-10 bg-white-telegram rounded-lg">
+    <h1 class="text-4xl font-bold text-center text-slate-700 mb-8" data-aos="fade-up">
+      My Experiences
+    </h1>
+    <div class="space-y-6">
+      <div class="bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center md:items-start md:space-x-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex-shrink-0">
+          <span class="inline-block bg-sky-400 text-white text-lg font-semibold px-4 py-2 rounded-md mb-3">2021 - 2024</span>
         </div>
-    </section>
-
-    <section class="mt-40 container mx-auto p-6 bg-white-telegram rounded-lg">
-        <h1 class="text-4xl font-bold text-center text-slate-700 mb-8" 
-        data-aos="fade-up">
-        My Experiences</h1>
-        
-        <div class="bg-white p-6 rounded-lg shadow-md flex flex-col mb-4 md:flex-row items-center md:items-start md:space-x-6" 
-        data-aos="fade-up" 
-        data-aos-delay="200">
-            <div class="flex-shrink-0">
-                <span class="inline-block bg-sky-400 text-white text-lg font-semibold px-4 py-2 rounded-md mb-3">2021 - 2024</span>
-            </div>
-            <div>
-                <h2 class="text-2xl font-semibold text-slate-800">Software Engineering</h2>
-                <p class="text-slate-600">SMK TI Bali Global Denpasar</p>
-                <p class="text-sm text-gray-500 mt-2">Become a student at SMK TI Bali Global Denpasar & learn about HTML, CSS, MySQL and PHP</p>
-            </div>
+        <div>
+          <h2 class="text-2xl font-semibold text-slate-800">Software Engineering</h2>
+          <p class="text-slate-600">SMK TI Bali Global Denpasar</p>
+          <p class="text-sm text-gray-500 mt-2">Become a student at SMK TI Bali Global Denpasar & learn about HTML, CSS, MySQL, and PHP.</p>
         </div>
-
-        <div class="bg-white p-6 rounded-lg shadow-md flex flex-col mb-4 md:flex-row items-center md:items-start md:space-x-6" 
-        data-aos="fade-up" 
-        data-aos-delay="200">
-            <div class="flex-shrink-0">
-                <span class="inline-block bg-sky-400 text-white text-lg font-semibold px-4 py-2 rounded-md mb-3">2021 - 2022</span>
-            </div>
-            <div>
-                <h2 class="text-2xl font-semibold text-slate-800">Web Developer</h2>
-                <p class="text-slate-600">PT. Karya Anak Bangsa</p>
-                <p class="text-sm text-gray-500 mt-2">Worked on various web projects, optimized UI/UX, and improved website performance.</p>
-            </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center md:items-start md:space-x-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex-shrink-0">
+          <span class="inline-block bg-sky-400 text-white text-lg font-semibold px-4 py-2 rounded-md mb-3">2021 - 2022</span>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-md flex flex-col mb-4 md:flex-row items-center md:items-start md:space-x-6" 
-        data-aos="fade-up" 
-        data-aos-delay="200">
-            <div class="flex-shrink-0">
-                <span class="inline-block bg-sky-400 text-white text-lg font-semibold px-4 py-2 rounded-md mb-3">2021 - 2022</span>
-            </div>
-            <div>
-                <h2 class="text-2xl font-semibold text-slate-800">Web Developer</h2>
-                <p class="text-slate-600">PT. Karya Anak Bangsa</p>
-                <p class="text-sm text-gray-500 mt-2">Worked on various web projects, optimized UI/UX, and improved website performance.</p>
-            </div>
+        <div>
+          <h2 class="text-2xl font-semibold text-slate-800">Web Developer</h2>
+          <p class="text-slate-600">PT. Karya Anak Bangsa</p>
+          <p class="text-sm text-gray-500 mt-2">Worked on various web projects, optimized UI/UX, and improved website performance.</p>
         </div>
-    </section>
-
-    <section class="mt-40 container mx-auto p-6 bg-white-telegram min-h-[1200px]">
-        <h1 class="text-3xl font-bold text-center"
-        data-aos="fade-up"
-        data-aos-duration="800"
-        data-aos-delay="200"
-        data-aos-easing="ease-out"
-        data-aos-anchor-placement="top-bottom"
-        >My Portofolio</h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="bg-white p-6 rounded-lg shadow-md mt-6"
-            data-aos="fade-up" 
-            data-aos-delay="200">
-                <img src="img/game.png" alt="" class="rounded-lg mb-4 h-48 w-full object-cover">
-                <div class="flex flex-row mt-1 mb-1">
-                    <img src="img/github_5968896.png" alt="" class="w-7">
-                    <img src="img/world-wide-web_1006771.png" alt="" class="w-7 ml-2">
-                </div>
-                <h2 class="text-2xl font-semibold">Lifting Simulator</h2>
-                <p class="text-sm text-gray-500 mt-2">A basic game of Lifting Simulator in Roblox</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-md mt-6"
-            data-aos="fade-up" 
-            data-aos-delay="200"
-            >
-                <img src="img/laundrywak.png" alt="" class="rounded-lg mb-4 h-48 w-full object-cover">
-                <div class="flex flex-row mt-1 mb-1">
-                    <img src="img/github_5968896.png" alt="" class="w-7">
-                    <img src="img/world-wide-web_1006771.png" alt="" class="w-7 ml-2">
-                </div>
-                <h2 class="text-2xl font-semibold">laundrywak</h2>
-                <p class="text-sm text-gray-500 mt-2">A Laundry System that helps you to manage your laundry, from ordering to delivery.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-md mt-6"
-            data-aos="fade-up" 
-            data-aos-delay="200"
-            >
-                <img src="img/kedaikopi-joki.png" alt="" class="rounded-lg mb-4 h-48 w-full object-cover">
-                <div class="flex flex-row mt-1 mb-1">
-                    <img src="img/github_5968896.png" alt="" class="w-7">
-                    <img src="img/world-wide-web_1006771.png" alt="" class="w-7 ml-2">
-                </div>
-                <h2 class="text-2xl font-semibold">Kedai Kopi</h2>
-                <p class="text-sm text-gray-500 mt-2">A Website that shows landing page and menu for Kedai Kopi</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-md mt-6"
-            data-aos="fade-up" 
-            data-aos-delay="200"
-            >
-                <img src="img/portofolio-1.png" alt="" class="rounded-lg mb-4 h-48 w-full object-cover">
-                <div class="flex flex-row mt-1 mb-1">
-                    <img src="img/github_5968896.png" alt="" class="w-7">
-                    <img src="img/world-wide-web_1006771.png" alt="" class="w-7 ml-2">
-                </div>
-                <h2 class="text-2xl font-semibold">Portofolio</h2>
-                <p class="text-sm text-gray-500 mt-2">A portofolio website that using HTML, CSS, and JS</p>
-            </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center md:items-start md:space-x-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex-shrink-0">
+          <span class="inline-block bg-sky-400 text-white text-lg font-semibold px-4 py-2 rounded-md mb-3">2021 - 2022</span>
         </div>
-    </section>
-
-    <section class="mt-40 container mx-auto p-6 bg-white-telegram min-h-[1200px]">
-        <h1 class="text-3xl font-bold text-center"
-            data-aos="fade-up"
-            data-aos-duration="800"
-            data-aos-delay="200"
-            >My Certificates</h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="bg-white p-6 rounded-lg shadow-md mt-6"
-            data-aos="fade-up"
-            data-aos-duration="800"
-            data-aos-delay="200"
-            >
-                <img src="img/certificate syntax.jpg" alt="Syntax" class="rounded-lg mb-4 h-48 w-full object-cover">
-                <h2 class="text-xl font-semibold text-center">UKM Syntax</h2>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-md mt-6"
-            data-aos="fade-up"
-            data-aos-duration="800"
-            data-aos-delay="200"
-            >
-                <img src="img/certificate-smarthpath.jpeg" alt="Syntax" class="rounded-lg mb-4 h-48 w-full object-cover">
-                <h2 class="text-xl font-semibold text-center">Smarthpath</h2>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-md mt-6"
-            data-aos="fade-up"
-            data-aos-duration="800"
-            data-aos-delay="200"
-            >
-                <img src="img/certificate.jpg" alt="Syntax" class="rounded-lg mb-4 h-48 w-full object-cover">
-                <h2 class="text-xl font-semibold text-center">English Course</h2>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-md mt-6"
-            data-aos="fade-up"
-            data-aos-duration="800"
-            data-aos-delay="200"
-            >
-                <img src="img/sertifikat 3.jpg" alt="Syntax" class="rounded-lg mb-4 h-48 w-full object-cover">
-                <h2 class="text-xl font-semibold text-center">Infinity from UKM Progress</h2>
-            </div>
+        <div>
+          <h2 class="text-2xl font-semibold text-slate-800">Web Developer</h2>
+          <p class="text-slate-600">PT. Karya Anak Bangsa</p>
+          <p class="text-sm text-gray-500 mt-2">Worked on various web projects, optimized UI/UX, and improved website performance.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <div class="container mx-auto p-6 mt-40 rounded-lg">
-            <div class="bg-white p-6 rounded-lg shadow-md mt-6">
-                <h2 class="text-2xl font-semibold text-center">Agung Surya</h2>
-                <div class="flex flex-row mt-1 mb-1 justify-center">
-                    <img src="img/github_5968896.png" alt="" class="w-7">
-                    <img src="img/world-wide-web_1006771.png" alt="" class="w-7 ml-2">
-                </div>
-            </div>
+  <!-- Portfolio Section -->
+  <section class="mt-40 px-4 md:px-10 pb-10 bg-white-telegram rounded-lg">
+    <h1 class="text-3xl font-bold text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom">
+      My Portfolio
+    </h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+      <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
+        <img src="img/game.png" alt="Game" class="rounded-lg mb-4 h-48 w-full object-cover">
+        <div class="flex space-x-2 mt-1 mb-1">
+          <img src="img/github_5968896.png" alt="GitHub" class="w-7">
+          <img src="img/world-wide-web_1006771.png" alt="Live Site" class="w-7">
         </div>
-    </footer>
+        <h2 class="text-2xl font-semibold">Lifting Simulator</h2>
+        <p class="text-sm text-gray-500 mt-2">A basic game of Lifting Simulator in Roblox.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
+        <img src="img/laundrywak.png" alt="Laundrywak" class="rounded-lg mb-4 h-48 w-full object-cover">
+        <div class="flex space-x-2 mt-1 mb-1">
+          <img src="img/github_5968896.png" alt="GitHub" class="w-7">
+          <img src="img/world-wide-web_1006771.png" alt="Live Site" class="w-7">
+        </div>
+        <h2 class="text-2xl font-semibold">Laundrywak</h2>
+        <p class="text-sm text-gray-500 mt-2">A laundry system that helps manage orders to delivery.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
+        <img src="img/kedaikopi-joki.png" alt="Kedai Kopi" class="rounded-lg mb-4 h-48 w-full object-cover">
+        <div class="flex space-x-2 mt-1 mb-1">
+          <img src="img/github_5968896.png" alt="GitHub" class="w-7">
+          <img src="img/world-wide-web_1006771.png" alt="Live Site" class="w-7">
+        </div>
+        <h2 class="text-2xl font-semibold">Kedai Kopi</h2>
+        <p class="text-sm text-gray-500 mt-2">A website that shows landing page and menu for Kedai Kopi.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
+        <img src="img/portofolio-1.png" alt="Portfolio" class="rounded-lg mb-4 h-48 w-full object-cover">
+        <div class="flex space-x-2 mt-1 mb-1">
+          <img src="img/github_5968896.png" alt="GitHub" class="w-7">
+          <img src="img/world-wide-web_1006771.png" alt="Live Site" class="w-7">
+        </div>
+        <h2 class="text-2xl font-semibold">Portfolio</h2>
+        <p class="text-sm text-gray-500 mt-2">A portfolio website using HTML, CSS, and JS.</p>
+      </div>
+    </div>
+  </section>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 1000,
-        easing: "ease-out",
-        once: false,
-        mirror: true,
-      });
+  <!-- Certificates Section -->
+  <section class="mt-40 px-4 md:px-10 pb-10 bg-white-telegram rounded-lg">
+    <h1 class="text-3xl font-bold text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom">
+      My Certificates
+    </h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+      <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+        <img src="img/certificate syntax.jpg" alt="UKM Syntax" class="rounded-lg mb-4 h-48 w-full object-cover">
+        <h2 class="text-xl font-semibold text-center">UKM Syntax</h2>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+        <img src="img/certificate-smarthpath.jpeg" alt="Smarthpath" class="rounded-lg mb-4 h-48 w-full object-cover">
+        <h2 class="text-xl font-semibold text-center">Smarthpath</h2>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+        <img src="img/certificate.jpg" alt="English Course" class="rounded-lg mb-4 h-48 w-full object-cover">
+        <h2 class="text-xl font-semibold text-center">English Course</h2>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+        <img src="img/sertifikat 3.jpg" alt="Infinity from UKM Progress" class="rounded-lg mb-4 h-48 w-full object-cover">
+        <h2 class="text-xl font-semibold text-center">Infinity from UKM Progress</h2>
+      </div>
+    </div>
+  </section>
 
-      //reset animasi aos
-      document.addEventListener('scroll', () => {
-        AOS.refresh();
-      });
-      
-    </script>
+  <!-- Footer -->
+  <footer class="mt-20 bg-gray-800 text-white py-6">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-2xl font-semibold">Agung Surya</h2>
+      <div class="flex justify-center mt-2 space-x-3">
+        <img src="img/github_5968896.png" alt="GitHub" class="w-7">
+        <img src="img/world-wide-web_1006771.png" alt="Web" class="w-7">
+      </div>
+    </div>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: "ease-out",
+      once: false,
+      mirror: true,
+    });
+
+    // Refresh AOS on scroll to trigger animations repeatedly
+    document.addEventListener('scroll', () => {
+      AOS.refresh();
+    });
+  </script>
 </body>
 </html>
